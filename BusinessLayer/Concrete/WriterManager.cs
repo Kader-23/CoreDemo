@@ -37,7 +37,7 @@ namespace BusinessLayer.Concrete
 
         public Writer GetById(int id)
         {
-            return _writerdal.GetById(id);
+            return _writerdal.GetByID(id);
         }
 
         public List<Writer> GetList()
