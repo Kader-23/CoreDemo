@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-   public class NewsLetterManager:INewsLetterService
+    public class NewsLetterManager : INewsLetterService
     {
         INewsLetterDal _newsLetterDal;
 
@@ -20,7 +20,31 @@ namespace BusinessLayer.Concrete
 
         public void AddNewsLetter(NewsLetter newsLetter)
         {
-            _newsLetterDal.Insert(newsLetter);
+            throw new NotImplementedException();
+        }
+
+        public List<NewsLetter> GetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TAdd(NewsLetter t)
+        {
+            _newsLetterDal.Insert(t);
+        }
+
+        public void TDelete(NewsLetter t)
+        {
+            _newsLetterDal.Delete(t);        }
+
+        public NewsLetter TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(NewsLetter t)
+        {
+            _newsLetterDal.Update(t);
         }
     }
 }

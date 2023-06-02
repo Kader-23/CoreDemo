@@ -29,7 +29,7 @@ namespace CoreDemo
             services.AddControllersWithViews();
 
 
-          
+
 
             services.AddMvc(config =>
             {
@@ -42,7 +42,7 @@ namespace CoreDemo
             services.AddMvc();
             services.AddSession();
             services.AddAuthentication(
-                CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x=>
+                CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
                {
                    x.LoginPath = "/Login/Index";
                }
@@ -76,6 +76,10 @@ namespace CoreDemo
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
