@@ -18,10 +18,10 @@ namespace BusinessLayer.Concrete
             _newsLetterDal = newsLetterDal;
         }
 
-        public void AddNewsLetter(NewsLetter newsLetter)
-        {
-            throw new NotImplementedException();
-        }
+        //public void AddNewsLetter(NewsLetter newsLetter)
+        //{
+        //    _newsLetterDal.Insert(newsLetter);
+        //}
 
         public List<NewsLetter> GetList()
         {

@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstract
 {
   public interface INewsLetterService:IGenericService<NewsLetter>
     {
-        void AddNewsLetter(NewsLetter newsLetter);
+        //void AddNewsLetter(NewsLetter newsLetter);
     }
 }
